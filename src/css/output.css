@@ -557,10 +557,6 @@ video {
   margin-bottom: 2.5rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
 .box-border {
   box-sizing: border-box;
 }
@@ -625,12 +621,38 @@ video {
   row-gap: 0.25rem;
 }
 
-.gap-y-2 {
-  row-gap: 0.5rem;
-}
-
 .gap-y-6 {
   row-gap: 1.5rem;
+}
+
+.rounded-b-xl {
+  border-bottom-right-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+}
+
+.rounded-l-none {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.rounded-t-xl {
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+.rounded-r-xl {
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
+.rounded-t {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.rounded-r-none {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 .bg-darkDesaturatedBlue {
@@ -669,17 +691,8 @@ video {
   line-height: 2rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
 .font-bold {
   font-weight: 700;
-}
-
-.leading-7 {
-  line-height: 1.75rem;
 }
 
 .leading-6 {
@@ -725,6 +738,24 @@ video {
   width: 100%;
 }
 
+.after\:rounded-r-none::after {
+  content: var(--tw-content);
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.after\:rounded-t-xl::after {
+  content: var(--tw-content);
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+.after\:rounded-r-xl::after {
+  content: var(--tw-content);
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
 .after\:bg-softViolet::after {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
@@ -750,11 +781,6 @@ video {
   .sm\:justify-evenly {
     justify-content: space-evenly;
   }
-
-  .sm\:rounded-l-lg {
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-  }
 }
 
 @media (min-width: 768px) {
@@ -765,10 +791,6 @@ video {
   .md\:my-0 {
     margin-top: 0px;
     margin-bottom: 0px;
-  }
-
-  .md\:mt-0 {
-    margin-top: 0px;
   }
 
   .md\:w-\[90\%\] {
@@ -791,6 +813,64 @@ video {
     row-gap: 0.5rem;
   }
 
+  .md\:rounded {
+    border-radius: 0.25rem;
+  }
+
+  .md\:rounded-l-xl {
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+  }
+
+  .md\:rounded-r-xl {
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+  }
+
+  .md\:rounded-t-none {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+
+  .md\:rounded-r {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+
+  .md\:rounded-b {
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+
+  .md\:rounded-b-none {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .md\:rounded-br-none {
+    border-bottom-right-radius: 0px;
+  }
+
+  .md\:rounded-bl-xl {
+    border-bottom-left-radius: 0.75rem;
+  }
+
+  .md\:rounded-tr-xl {
+    border-top-right-radius: 0.75rem;
+  }
+
+  .md\:rounded-br-xl {
+    border-bottom-right-radius: 0.75rem;
+  }
+
+  .md\:rounded-tl-xl {
+    border-top-left-radius: 0.75rem;
+  }
+
+  .md\:rounded-tl {
+    border-top-left-radius: 0.25rem;
+  }
+
   .md\:p-10 {
     padding: 2.5rem;
   }
@@ -802,5 +882,39 @@ video {
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .after\:md\:rounded-r-xl::after {
+    content: var(--tw-content);
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+  }
+
+  .after\:md\:rounded-t-xl::after {
+    content: var(--tw-content);
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+  }
+
+  .after\:md\:rounded-r-none::after {
+    content: var(--tw-content);
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .after\:md\:rounded-t-none::after {
+    content: var(--tw-content);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+
+  .after\:md\:rounded-tr-xl::after {
+    content: var(--tw-content);
+    border-top-right-radius: 0.75rem;
+  }
+
+  .after\:md\:rounded-br-xl::after {
+    content: var(--tw-content);
+    border-bottom-right-radius: 0.75rem;
   }
 }
